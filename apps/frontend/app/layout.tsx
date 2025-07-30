@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+import "@/styles/globals.css";
+
+export const metadata: Metadata = {
+  title: "Kraken Take Home Test",
+  description: "Powered by Next.js",
+};
+
 export default function RootLayout({
   children,
 }: {
