@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Extended ESlint config to use Prettier formatting check
 - Pre-commit checks using `Husky` and `lint-staged` to check for ESLint errors and / or Prettier formatting errors
 - Added `TailwindCSS` for styling, including prettier formatting plugin and VSCode Intellisense support
+- Added `Storybook` for component driven development and testing
 
 ### Changed
 
