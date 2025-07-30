@@ -1,1 +1,24 @@
 @import "tailwindcss";
+
+@theme {
+  --color-*: initial;
+  --color-hemocyanin: #180048;
+  --color-ice: #f0ffff;
+  --color-plum: #600e6b;
+  --color-purpleHaze: #a49fc8;
+  --color-siphon: #100030;
+  --color-sohoLights: #f050f8;
+
+  --font-*: initial;
+  --font-sans: Gotham, helvetica, arial, sans-serif;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 800;
+}
+
+@layer base {
+  body {
+    @apply bg-siphon font-sans font-normal text-ice;
+  }
+}
