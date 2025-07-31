@@ -7,7 +7,9 @@
     "start": "next start",
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "test": "vitest",
+    "test-storybook": "vitest --project=storybook"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.11",
