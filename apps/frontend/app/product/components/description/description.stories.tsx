@@ -31,8 +31,7 @@ export const Default: Story = {
     await expect(descriptionRegion).toBeInTheDocument();
 
     const regionQueries = within(descriptionRegion);
-    const heading = regionQueries.getByRole("heading");
-    await expect(heading.tagName).toBe("H2");
+    const heading = regionQueries.getByRole("heading", { level: 2 });
     await expect(heading).toHaveTextContent("Description");
 
     const paragraph = regionQueries.getByRole("paragraph");
