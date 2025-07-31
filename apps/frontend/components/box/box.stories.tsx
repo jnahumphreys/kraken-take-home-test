@@ -25,7 +25,7 @@ const meta = {
     docs: {
       description: {
         component:
-          "The box component is a generic polymophic component, used as a basis for other compositional React components",
+          "The `Box` component is a generic polymophic component, used as a basis for other compositional React components",
       },
     },
   },
@@ -38,7 +38,6 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     children: "I'm a Box component; I may be small, but I'm very mighty!",
-    as: "section",
     className: "bg-[white] text-[black] p-5 text-center",
     id: "box-component",
   },
@@ -53,12 +52,26 @@ export const Default: Story = {
       canvas.getByText(
         "I'm a Box component; I may be small, but I'm very mighty!",
       ).tagName,
-    ).toBe("SECTION");
+    ).toBe("DIV");
 
     await expect(
       canvas.getByText(
         "I'm a Box component; I may be small, but I'm very mighty!",
       ),
     ).toHaveClass("bg-[white] text-[black] p-5 text-center", { exact: true });
+  },
+};
+
+export const WithCustomTag: Story = {
+  args: {
+    ...Default.args,
+    as: "section",
+  },
+  play: async ({ canvas }) => {
+    await expect(
+      canvas.getByText(
+        "I'm a Box component; I may be small, but I'm very mighty!",
+      ).tagName,
+    ).toBe("SECTION");
   },
 };
