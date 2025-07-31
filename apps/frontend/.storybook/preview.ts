@@ -1,6 +1,37 @@
 import type { Preview } from "@storybook/nextjs-vite";
 import "@/styles/globals.css";
 
+const tailwindCssViewports = {
+  sm: {
+    name: "sm",
+    styles: {
+      width: "40rem",
+      height: "auto",
+    },
+  },
+  md: {
+    name: "md",
+    styles: {
+      width: "48rem",
+      height: "auto",
+    },
+  },
+  lg: {
+    name: "lg",
+    styles: {
+      width: "64rem",
+      height: "auto",
+    },
+  },
+  xl: {
+    name: "xl",
+    styles: {
+      width: "80rem",
+      height: "auto",
+    },
+  },
+};
+
 const preview: Preview = {
   parameters: {
     controls: {
@@ -15,6 +46,11 @@ const preview: Preview = {
       // 'error' - fail CI on a11y violations
       // 'off' - skip a11y checks entirely
       test: "todo",
+    },
+    viewport: {
+      options: {
+        ...tailwindCssViewports,
+      },
     },
   },
 };
