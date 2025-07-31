@@ -6,28 +6,28 @@ const tailwindCssViewports = {
     name: "sm",
     styles: {
       width: "40rem",
-      height: "auto",
+      height: "100%",
     },
   },
   md: {
     name: "md",
     styles: {
       width: "48rem",
-      height: "auto",
+      height: "100%",
     },
   },
   lg: {
     name: "lg",
     styles: {
       width: "64rem",
-      height: "auto",
+      height: "100%",
     },
   },
   xl: {
     name: "xl",
     styles: {
       width: "80rem",
-      height: "auto",
+      height: "100%",
     },
   },
 };
