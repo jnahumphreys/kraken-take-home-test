@@ -19,6 +19,9 @@ const meta = {
     id: {
       control: false,
     },
+    variant: {
+      control: false,
+    },
   },
   parameters: {
     layout: "padded",
@@ -84,6 +87,23 @@ export const WithBody1Variant: Story = {
   play: async ({ canvas }) => {
     await expect(canvas.getByRole("paragraph")).toHaveTextContent(
       "Here I render as a paragraph tag, with body1 styling",
+    );
+
+    await expect(canvas.getByRole("paragraph").tagName).toBe("P");
+  },
+};
+
+export const WithBody2Variant: Story = {
+  args: {
+    ...Default.args,
+    variant: "body2",
+    as: "p",
+    children: "Here I render as a paragraph tag, with body2 styling",
+  },
+
+  play: async ({ canvas }) => {
+    await expect(canvas.getByRole("paragraph")).toHaveTextContent(
+      "Here I render as a paragraph tag, with body2 styling",
     );
 
     await expect(canvas.getByRole("paragraph").tagName).toBe("P");
