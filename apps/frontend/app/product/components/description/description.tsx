@@ -7,7 +7,7 @@ export function Description() {
       className="bg-hemocyanin"
       aria-labelledby="description-heading"
     >
-      <Row className="flex flex-col gap-5 py-5 text-ice">
+      <Row className="flex flex-col gap-5 py-5">
         <Typography id="description-heading" variant="h2" as="h2">
           Description
         </Typography>
