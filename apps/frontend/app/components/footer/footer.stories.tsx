@@ -28,3 +28,27 @@ export const Default: Story = {
     );
   },
 };
+
+export const ViewportSm: Story = {
+  globals: {
+    viewport: { value: "sm", isRotated: false },
+  },
+};
+
+export const ViewportMd: Story = {
+  globals: {
+    viewport: { value: "md", isRotated: false },
+  },
+};
+
+export const ViewportLg: Story = {
+  globals: {
+    viewport: { value: "lg", isRotated: false },
+  },
+};
+
+export const ViewportXl: Story = {
+  globals: {
+    viewport: { value: "xl", isRotated: false },
+  },
+};
