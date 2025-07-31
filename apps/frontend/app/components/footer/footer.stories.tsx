@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
+import { expect } from "storybook/test";
 
 import { Footer } from "./footer";
 
@@ -20,4 +21,10 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default = {} satisfies Story;
+export const Default: Story = {
+  play: async ({ canvas }) => {
+    await expect(canvas.getByRole("contentinfo")).toHaveTextContent(
+      "Octopus Energy Ltd is a company registered in England and Wales.Registered number: 09263424. Registered office: 33 Holborn, London, EC1N 2HT. Trading office: 20-24 Broadwick Street, London, W1F 8HT",
+    );
+  },
+};
