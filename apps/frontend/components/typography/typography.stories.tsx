@@ -58,14 +58,32 @@ export const Default: Story = {
   },
 };
 
-export const WithH2Variant: Story = {
+export const AsH1Variant: Story = {
+  args: {
+    ...Default.args,
+    variant: "h1",
+    as: "h1",
+    children: "Here I render as a level 1 heading, with level 1 styling",
+  },
+  name: "As H1 Variant",
+
+  play: async ({ canvas }) => {
+    await expect(canvas.getByRole("heading")).toHaveTextContent(
+      "Here I render as a level 1 heading, with level 1 styling",
+    );
+
+    await expect(canvas.getByRole("heading").tagName).toBe("H1");
+  },
+};
+
+export const AsH2Variant: Story = {
   args: {
     ...Default.args,
     variant: "h2",
     as: "h2",
     children: "Here I render as a level 2 heading, with level 2 styling",
   },
-  name: "With H2 Variant",
+  name: "As H2 Variant",
 
   play: async ({ canvas }) => {
     await expect(canvas.getByRole("heading")).toHaveTextContent(
@@ -76,7 +94,7 @@ export const WithH2Variant: Story = {
   },
 };
 
-export const WithBody1Variant: Story = {
+export const AsBody1Variant: Story = {
   args: {
     ...Default.args,
     variant: "body1",
@@ -93,7 +111,7 @@ export const WithBody1Variant: Story = {
   },
 };
 
-export const WithBody2Variant: Story = {
+export const AsBody2Variant: Story = {
   args: {
     ...Default.args,
     variant: "body2",
@@ -104,6 +122,23 @@ export const WithBody2Variant: Story = {
   play: async ({ canvas }) => {
     await expect(canvas.getByRole("paragraph")).toHaveTextContent(
       "Here I render as a paragraph tag, with body2 styling",
+    );
+
+    await expect(canvas.getByRole("paragraph").tagName).toBe("P");
+  },
+};
+
+export const AsSubtitleVariant: Story = {
+  args: {
+    ...Default.args,
+    variant: "subtitle",
+    as: "p",
+    children: "Here I render as a paragraph tag, with subtitle styling",
+  },
+
+  play: async ({ canvas }) => {
+    await expect(canvas.getByRole("paragraph")).toHaveTextContent(
+      "Here I render as a paragraph tag, with subtitle styling",
     );
 
     await expect(canvas.getByRole("paragraph").tagName).toBe("P");

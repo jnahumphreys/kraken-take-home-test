@@ -1,6 +1,6 @@
 import clsx from "clsx";
 
-type Variant = "body1" | "body2" | "h1" | "h2";
+type Variant = "body1" | "body2" | "h1" | "h2" | "subtitle";
 
 type TypographyBaseProps<Element> = {
   as?: "p" | Element;
@@ -26,7 +26,9 @@ export function Typography<Element extends React.ElementType>({
     "font-sans",
     variant === "body1" && "text-base/relaxed font-light",
     variant === "body2" && "text-sm/normal font-light",
+    variant === "h1" && "text-3xl/normal font-medium",
     variant === "h2" && "text-2xl font-medium",
+    variant === "subtitle" && "text-sm/normal font-medium text-purpleHaze",
     className,
   );
 
