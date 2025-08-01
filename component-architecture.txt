@@ -1,0 +1,74 @@
+components/                              # Global UI components
+├── Button/
+│   ├── Button.tsx
+│   ├── Button.stories.tsx
+│   └── index.ts
+├── Box/
+│   ├── Box.tsx
+│   ├── Box.stories.tsx
+│   └── index.ts
+├── Container/
+│   ├── Container.tsx
+│   ├── Container.stories.tsx
+│   └── index.ts
+├── Row/
+│   ├── Row.tsx
+│   ├── Row.stories.tsx
+│   └── index.ts
+├── Typography/
+│   ├── Typography.tsx
+│   ├── Typography.stories.tsx
+│   └── index.ts
+└── index.ts                             # Re-exports all public components
+
+app/
+├── components/                          # Main layout components
+│   ├── Header/
+│   │   ├── Header.tsx
+│   │   ├── Header.stories.tsx
+│   │   └── index.ts
+│   ├── Footer/
+│   │   ├── Footer.tsx
+│   │   ├── Footer.stories.tsx
+│   │   └── index.ts
+│   ├── Main/
+│   │   ├── Main.tsx
+│   │   ├── Main.stories.tsx
+│   │   └── index.ts
+│   └── index.ts                         # Re-exports all public components
+├── cart/                                # Cart page directory
+│   ├── components/                      # Cart-specific components
+│   │   └── CartLink/
+│   │       ├── CartLink.tsx             # Link to cart page with dynamic count
+│   │       ├── CartLink.stories.tsx
+│   │       └── index.ts
+│   └── stores/                          # Zustand store slices
+│       └── cartStore.ts                 # Cart quantity management
+├── product/                             # Product page directory
+│   ├── components/                      # Product-specific components
+│   │   ├── ProductHeader/
+│   │   │   ├── ProductHeader.tsx        # Layout container for title + form + image
+│   │   │   ├── ProductHeader.stories.tsx
+│   │   │   └── index.ts
+│   │   ├── ProductTitle/
+│   │   │   ├── ProductTitle.tsx         # h1 + subtitle (semantic header)
+│   │   │   ├── ProductTitle.stories.tsx
+│   │   │   └── index.ts
+│   │   ├── ProductImage/
+│   │   │   ├── ProductImage.tsx         # figure + Next.js Image
+│   │   │   ├── ProductImage.stories.tsx
+│   │   │   └── index.ts
+│   │   ├── AddToCart/
+│   │   │   ├── AddToCart.tsx            # Complete form with price + quantity + submit
+│   │   │   ├── AddToCart.stories.tsx
+│   │   │   └── index.ts
+│   │   ├── ProductDescription/
+│   │   │   ├── ProductDescription.tsx   # Description section
+│   │   │   ├── ProductDescription.stories.tsx
+│   │   │   └── index.ts
+│   │   └── ProductSpecifications/
+│   │       ├── ProductSpecifications.tsx # Specifications section
+│   │       ├── ProductSpecifications.stories.tsx
+│   │       └── index.ts
+│   └── page.tsx                         # Next.js page - composition + data fetching
+└── layout.tsx                           # Root layout
